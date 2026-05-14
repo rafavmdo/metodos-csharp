@@ -1,23 +1,43 @@
-Console.Write("Digite o nome do cliente: ");
-string cliente = Console.ReadLine()!;
-
-Console.Write("Digite o valor da compra: ");
-double valorCompra = double.Parse(Console.ReadLine()!);
-
-double desconto = 0;
-
-if (valorCompra >= 200)
+/*
+static string LerCliente()
 {
-    desconto = valorCompra * 0.15;
-}
-else
-{
-    desconto = valorCompra * 0.05;
+    Console.Write("Digite o nome do cliente: ");
+    return Console.ReadLine()!;
 }
 
-double valorFinal = valorCompra - desconto;
+static double LerValorCompra()
+{
+    Console.Write("Digite o valor da compra: ");
+    return double.Parse(Console.ReadLine()!);
+}
 
-Console.WriteLine($"Cliente: {cliente}");
-Console.WriteLine($"Valor da compra: R$ {valorCompra:F2}");
-Console.WriteLine($"Desconto: R$ {desconto:F2}");
-Console.WriteLine($"Valor final: R$ {valorFinal:F2}");
+static double CalcularDesconto(double valorCompra)
+{
+    double desconto = 0;
+
+    if (valorCompra > 100)
+    {
+        desconto = valorCompra * 0.1;
+    }
+    else
+    {
+        desconto = valorCompra * 0.05;
+    }
+    double valorFinal = valorCompra - desconto;
+    return valorFinal;
+}
+
+static void ExibirResultado()
+{
+    string cliente = LerCliente();
+    double valorCompra = LerValorCompra();
+    double valorFinal = CalcularDesconto(valorCompra);
+
+    Console.WriteLine($"Cliente: {cliente}");
+    Console.WriteLine($"Valor da compra: {valorCompra:F2}");
+    Console.WriteLine($"Desconto: {valorCompra - valorFinal:F2}");
+    Console.WriteLine($"Valor final da compra: {valorFinal:F2}");
+}
+
+ExibirResultado();
+*/

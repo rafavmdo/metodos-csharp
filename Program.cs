@@ -3,60 +3,40 @@ DEsenvolva a solução aqui em Program.cs, quando terminar cole o conteúdo
 no respectivo arquivo
 */
 
-static string LerNomeAluno()
+//exemplo 1 - com retorno (tipo string) e com parâmetro
+/*static string Concatenar(string nome, string sobrenome)
 {
-    Console.Write("Digite o nome do aluno: ");
+    string nomesobrenome = nome + " " + sobrenome;
+    return nomesobrenome;
+}
+string concatenado = Concatenar("Rafaela", "Victoria");
+Console.Writeline(concatenado);*/
+
+
+
+//exemplo 2 - sem retorno e com parâmetro
+/*static void Concatenar(string nome, string sobrenome)
+{
+    string nomesobrenome = nome + " " + sobrenome;
+    Console.WriteLine(nomesobrenome);
+}*/
+
+
+
+//exemplo 3 - sem retorno e sem parâmetro
+/*static void Concatenar()
+{
+    Console.WriteLine("Digite o nome: ");
     string nome = Console.ReadLine()!;
-    return nome;
+
+    Console.WriteLine("Digite o sobrenome: ");
+    string sobrenome = Console.ReadLine()!;
+
+    string nomeSobrenome = nome + " " + sobrenome;
+    Console.WriteLine(nomeSobrenome);
 }
+Concatenar();
+Console.WriteLine("Fim !!");*/
 
-static double LerNota(string mensagem)
-{
-    Console.Write(mensagem);
-    double nota = double.Parse(Console.ReadLine()!);
-    return nota;
-}
+//exemplo 4 - com retorno (tipo string) e sem parâmetro
 
-static double CalcularMedia(double nota1, double nota2, double nota3)
-{
-    return (nota1 + nota2 + nota3) / 3;
-}
-
-static string VerificarSituacao(double media)
-{
-    if (media >= 7)
-    {
-        return "Aprovado";
-    }
-    else if (media >= 5 && media < 7)
-    {
-        return "Em recuperação";
-    }
-    else
-    {
-        return "Reprovado";
-    }
-}
-
-static void ExibirResultado(string nome, double media, string VerificarSituacao)
-{
-    Console.WriteLine($"Nome do aluno: {nome}");
-    Console.WriteLine($"Media do aluno: {media:F2}");
-    Console.WriteLine($"Situação do aluno: {VerificarSituacao}");
-}
-
-static void ExecutarSistema()
-{
-    string nome = LerNomeAluno();
-
-    double nota1 = LerNota("Nota 1: ");
-    double nota2 = LerNota("Nota 2: ");
-    double nota3 = LerNota("Nota 3: ");
-
-    double media = CalcularMedia(nota1, nota2, nota3);
-    string situacao = VerificarSituacao(media);
-
-    ExibirResultado(nome, media, situacao);
-}
-
-ExecutarSistema();

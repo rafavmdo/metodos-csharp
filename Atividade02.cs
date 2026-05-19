@@ -4,7 +4,7 @@ estudar tabuada. O sistema deve permitir que o usuário escolha um número e exi
 a tabuada de 1 até 10.
 */
 
-/*
+
 static int LerNumero(string mensagem)
 {
     Console.WriteLine(mensagem);
@@ -31,4 +31,3 @@ static void ExecutarSistema()
 }
 
 ExecutarSistema();
-*/
